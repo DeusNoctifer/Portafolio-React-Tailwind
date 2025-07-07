@@ -1,12 +1,12 @@
-# React + Vite
+# Portafolio Personal <img src="https://vitejs.dev/logo.svg" alt="Vite" width="25" height="25"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="25" height="25"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind" width="25" height="25">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Vite](https://img.shields.io/badge/Vite-7.0%2B-brightgreen?logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/React-19.0%2B-blue?logo=react&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0%2B-06B6D4?logo=tailwindcss&logoColor=white)
 
-Currently, two official plugins are available:
+**Portafolio personal listo para despliegue!**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Características principales
+- **Frontend**: React + Vite + Tailwind CSS
+- **Configuración optimizada** con Vite
+- **Diseño responsive** con Tailwind
