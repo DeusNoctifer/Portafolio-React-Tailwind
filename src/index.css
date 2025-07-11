@@ -160,3 +160,36 @@
   padding: 0;
   text-align: center;
 }
+
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0) translateY(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-1000px) translateY(300px);
+    opacity: 0;
+  }
+}
+
+.meteor {
+  position: absolute;
+  background: linear-gradient(90deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  filter: blur(0.8px);
+  will-change: transform;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation-name: pulse-subtle;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
+}
