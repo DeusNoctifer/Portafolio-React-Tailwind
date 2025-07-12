@@ -17,19 +17,19 @@ const skills = [
   { name: "Mysql/MariaDB", level: 90, category: "backend" },
   { name: "PostgreSQL", level: 80, category: "backend" },
 
-  // Tools
-  { name: "Git", level: 95, category: "tools" },
-  { name: "Docker", level: 80, category: "tools" },
-  { name: "Linux", level: 95, category: "tools" },
+  // otras
+  { name: "Git", level: 95, category: "otras" },
+  { name: "Docker", level: 80, category: "otras" },
+  { name: "Linux", level: 95, category: "otras" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["todas", "frontend", "backend", "otras"];
 
 export const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("todas");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "todas" || skill.category === activeCategory
   );
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
