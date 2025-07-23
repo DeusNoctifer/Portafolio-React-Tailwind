@@ -22,10 +22,10 @@ export const ContactSection = () => {
         try {
             console.log("Enviando formulario...");
             const result = await emailjs.sendForm(
-                'service_vtxxwnj',
-                'template_y5xq0fi',
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 e.target,
-                'vzcs5JcqAm0hRwPgV'
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
             );
             console.log("Email enviado:", result);
             
