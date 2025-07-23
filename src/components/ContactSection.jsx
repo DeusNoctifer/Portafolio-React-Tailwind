@@ -9,23 +9,41 @@ import {
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
         setIsSubmitting(true);
 
-        setTimeout(() => {
+        try {
+            console.log("Enviando formulario...");
+            const result = await emailjs.sendForm(
+                'service_vtxxwnj',
+                'template_y5xq0fi',
+                e.target,
+                'vzcs5JcqAm0hRwPgV'
+            );
+            console.log("Email enviado:", result);
+            
             toast({
                 title: "Mensaje enviado!",
                 description: "Gracias por tu mensaje, te responderé pronto.",
             });
+            e.target.reset();
+        } catch (error) {
+            console.error("Error detallado:", error);
+            toast({
+                title: "Error",
+                description: "Hubo un problema al enviar tu mensaje. Por favor inténtalo de nuevo.",
+                variant: "destructive",
+            });
+        } finally {
             setIsSubmitting(false);
-        }, 1500);
+        }
     };
     return (
         <section id="contacto" className="py-24 px-4 relative bg-secondary/30">
@@ -107,13 +125,10 @@ export const ContactSection = () => {
                         </div>
                     </div>
 
-                    <div
-                        className="bg-card p-8 rounded-lg shadow-xs"
-                        onSubmit={handleSubmit}
-                    >
+                    <div className="bg-card p-8 rounded-lg shadow-xs">
                         <h3 className="text-2xl font-semibold mb-6"> ¡Envíame un mensaje!</h3>
 
-                        <form className="space-y-6">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <label
                                     htmlFor="name"
