@@ -9,7 +9,6 @@ export const StarBackground = () => {
     generateStars();
     generateMeteors();
 
-    // Intervalo para regenerar meteoros cada 15 segundos
     meteorInterval.current = setInterval(() => {
       generateMeteors();
     }, 15000);

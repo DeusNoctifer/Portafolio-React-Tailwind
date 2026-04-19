@@ -19,7 +19,7 @@ export const MainSection = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                    Desarrollador de software con tecnologías modernas. Especializado en crear aplicaciones web hermosas y funcionales.
+                    Software Developer especializado en soluciones integrales con arquitecturas escalables. Apasionado por la optimización de procesos, el análisis de software y la infraestructura moderna.
                 </p>
 
                 <div className="pt-4 opacity-0 animate-fade-in-delay-4">
