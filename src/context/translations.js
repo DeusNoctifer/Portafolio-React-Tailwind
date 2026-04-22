@@ -3,6 +3,25 @@ export const translations = {
   // Spanish -------
 
   es: {
+    projects: {
+      title: "Mis Proyectos",
+      subtitle: "Aquí algunos de mis proyectos. Cada uno cuidadosamente creado prestando atención en cada detalle y con las mejores prácticas.",
+      button: "Mira mi Github",
+      items: [
+        {
+          title: "Decora con Arte",
+          description: "Plataforma para gestionar pedidos e inventario con autenticación y roles.",
+          tags: ["Django", "Bootstrap", "Docker", "Postgres", "Google APIs", "Render"],
+          demo: "https://decora-con-arte.onrender.com"
+        },
+        {
+          title: "API - CRUD App",
+          description: "Consumo de una API con funcionalidades CRUD completas.",
+          tags: ["Express", "React", "Tailwind", "MariaDB"],
+          github: "https://github.com/DeusNoctifer/API-Node-Express-React-Tailwind"
+        },
+      ]
+    },
     navbar: [
       { name: "Inicio", href: "#inicio" },
       { name: "Sobre Mí", href: "#about" },
@@ -29,6 +48,25 @@ export const translations = {
   // English -------
 
   en: {
+    projects: {
+      title: "My Projects",
+      subtitle: "Here are some of my projects. Each one carefully crafted with attention to detail and best practices.",
+      button: "View my Github",
+      items: [
+        {
+          title: "Order Management",
+          description: "Platform for managing orders and inventory with authentication and roles.",
+          tags: ["Django", "Python 3.13", "Docker", "Postgres"],
+          demo: "https://decora-con-arte.onrender.com"
+        },
+        {
+          title: "API - CRUD App",
+          description: "API consumption with full CRUD functionalities.",
+          tags: ["Express", "React", "Tailwind", "MariaDB"],
+          github: "https://github.com/DeusNoctifer/API-Node-Express-React-Tailwind"
+        }
+      ]
+    },
     navbar: [
       { name: "Home", href: "#inicio" },
       { name: "About", href: "#about" },
@@ -55,6 +93,26 @@ export const translations = {
   // Chinese -------
 
   zh: {
+    projects: {
+      title: "我的项目",
+      subtitle: "这里是我的一些项目。每一个都经过精心制作，注重细节和最佳实践。",
+      button: "查看我的 Github",
+      items: [
+        {
+          title: "订单管理系统",
+          description: "具有身份验证和角色管理的订单与库存管理平台。",
+          tags: ["Django", "Python 3.13", "Docker", "Postgres"],
+          demo: "https://decora-con-arte.onrender.com"
+        },
+        {
+          title: "API - CRUD 应用",
+          description: "具有完整 CRUD 功能的 API 调用应用。",
+          tags: ["Express", "React", "Tailwind", "MariaDB"],
+          github: "https://github.com/DeusNoctifer/API-Node-Express-React-Tailwind"
+        }
+
+      ]
+    },
     navbar: [
       { name: "首页", href: "#inicio" },
       { name: "关于我", href: "#about" },
