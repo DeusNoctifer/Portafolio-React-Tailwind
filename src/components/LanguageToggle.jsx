@@ -8,15 +8,16 @@ export const LanguageToggle = () => {
     return (
         <button
             onClick={toggleLanguage}
+            // Quitamos el fixed y max-sm:hidden
             className={cn(
-                "fixed max-sm:hidden top-5 right-20 z-50 p-2 rounded-full transition-all duration-300",
+                "p-2 rounded-full transition-all duration-300",
                 "bg-primary/10 hover:bg-primary/20 text-primary border border-primary/20",
-                "focus:outline-none flex items-center gap-2 px-3 py-1.5"
+                "focus:outline-none flex items-center gap-2 px-3"
             )}
         >
-            <Languages className="h-5 w-5" />
+            <Languages className="h-4 w-4" />
             <span className="text-xs font-bold uppercase">
-                {language} {/* Esto mostrará ES, EN o ZH */}
+                {language}
             </span>
         </button>
     );

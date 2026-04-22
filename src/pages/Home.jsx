@@ -13,23 +13,28 @@ import { Footer } from "@/components/Footer";
 
 export const Home = () => {
     return (
-        // EL PROVIDER DEBE ENVOLVER TODO
         <LanguageProvider> 
             <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-                <ThemeToggle />
-                <LanguageToggle />
                 
+                {/* BORRAMOS LOS TOGGLES DE AQUÍ. YA NO VAN. */}
+                
+                {/* Efectos del background */}
                 <StarBackground />
+
+                {/* NavBar (¡Aquí adentro ya viven los botones ahora!) */}
                 <Navbar />
 
+                {/* Main Content */}
                 <main>
                     <MainSection />
                     <AboutSection />
                     <ExperienceSection />
                     <SkillsSection />
+                    {/* <ProjectsSection /> */}
                     <ContactSection />
                 </main>
 
+                {/* Footer */}
                 <Footer />
             </div>
         </LanguageProvider>
