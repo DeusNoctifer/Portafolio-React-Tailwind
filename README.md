@@ -1,50 +1,95 @@
-# Portafolio Personal <img src="https://vitejs.dev/logo.svg" alt="Vite" width="25" height="25"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="25" height="25"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind" width="25" height="25">
+# Portfolio <img src="https://vitejs.dev/logo.svg" alt="Vite" width="25" height="25"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="25" height="25"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind" width="25" height="25">
 
-![Vite](https://img.shields.io/badge/Vite-7.0%2B-brightgreen?logo=vite&logoColor=white)
-![React](https://img.shields.io/badge/React-19.0%2B-blue?logo=react&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0%2B-06B6D4?logo=tailwindcss&logoColor=white)
-![EmailJS](https://img.shields.io/badge/EmailJS-4.4.1-blueviolet?logo=email&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![EmailJS](https://img.shields.io/badge/EmailJS-4B4B4B?style=for-the-badge&logo=gmail&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-**Portafolio personal listo para despliegue!**
+Personal portfolio built with **React 19**, **Vite 7**, and **Tailwind CSS v4**. Features multi-language support, dark/light theme, a contact form via EmailJS, and an interactive starry background.
 
-## 🚀 Características principales
-- **Frontend**: React + Vite + Tailwind CSS
-- **Configuración optimizada** con Vite
-- **Diseño responsive** con Tailwind
-- **Formulario de contacto funcional** usando [EmailJS](https://www.emailjs.com/)
+## Features
 
-## ⚙️ Instalación y uso
+- 🌍 **Multi-language**: Spanish, English, and Chinese
+- 🌓 **Dark/Light theme** with system preference detection
+- ⭐ **Animated star background** with meteor showers
+- 📱 **Fully responsive** — mobile-first design
+- 📬 **Functional contact form** powered by EmailJS
+- 📄 **Downloadable CV** and certificate viewer
+- 🎯 **SEO optimized** with Open Graph and Twitter Cards
+- ⚡ **Blazing fast** with Vite 7
 
-Sigue estos pasos para correr el proyecto localmente:
+## Tech Stack
 
-1. Clona el repositorio:
+| Category | Technologies |
+|---|---|
+| **Framework** | React 19, React Router DOM v7 |
+| **Build Tool** | Vite 7 |
+| **Styling** | Tailwind CSS v4 (CSS-first config) |
+| **Icons** | Lucide React, React Icons |
+| **Email** | EmailJS (browser SDK) |
+| **UI** | Radix UI Toast, class-variance-authority |
+| **Deployment** | Vercel (SPA rewrites) |
+
+## Project Structure
+
+```
+src/
+├── assets/           # CV PDF, certificates, icons
+├── components/       # UI components & sections
+│   └── ui/           # Toast primitives
+├── context/          # Language context & translations
+├── hooks/            # Custom hooks (use-toast)
+├── lib/              # Utilities (cn function)
+└── pages/            # Home & NotFound pages
+```
+
+## Getting Started
+
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/DeusNoctifer/Portafolio-React-Tailwind
    cd Portafolio-React-Tailwind
+   ```
 
-2. Instala las dependencias:
+2. Install dependencies:
 
    ```bash
    npm install
+   ```
 
-3. Crea un archivo .env en la raíz del proyecto y agrega las siguientes variables de entorno (puedes obtenerlas desde   EmailJS)::
+3. Create a `.env` file in the root directory with your EmailJS credentials:
 
-    ```bash
-    VITE_EMAILJS_SERVICE_ID=tu_service_id
-    VITE_EMAILJS_TEMPLATE_ID=tu_template_id
-    VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+   ```env
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
 
-4. Inicia el servidor de desarrollo:
+   > Get these from [EmailJS](https://www.emailjs.com/) after creating a free account.
+
+4. Start the development server:
 
    ```bash
    npm run dev
+   ```
 
-5. Abre tu navegador y ve a:
+5. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-   ```bash
-   http://localhost:5173
+## Available Scripts
 
-## 🌐 Demo
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint across the project |
 
-Puedes ver el portafolio en vivo aquí: [https://juan-manuel-valencia-velez.vercel.app/](https://juan-manuel-valencia-velez.vercel.app/)
+## Live Demo
+
+Check out the live version at [juanma-tech.vercel.app](https://juanma-tech.vercel.app/)
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](LICENSE) file for details.
