@@ -23,19 +23,19 @@ export const ProjectsSection = () => {
 
               className="flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-2rem)] max-w-[400px] p-6 bg-card/50 backdrop-blur-sm rounded-xl border border-border hover:border-primary/50 transition-all duration-300 group"
             >
-              <div className="mb-4 text-primary opacity-50 group-hover:opacity-100 transition-opacity">
+              <div className="mb-4 text-primary opacity-50 group-hover:opacity-100 transition-opacity flex justify-center">
                 <Code2 size={32} />
               </div>
 
-              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors min-h-[3.5rem] flex items-center">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors min-h-[3.5rem] flex items-center justify-center text-center">
                 {project.title}
               </h3>
               
-              <p className="text-muted-foreground text-sm mb-6 flex-grow">
+              <p className="text-muted-foreground text-sm mb-6 flex-grow text-center">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-6 min-h-[4rem] content-start">
+              <div className="flex flex-wrap justify-center gap-2 mb-6 min-h-[4rem] content-start">
                 {project.tags.map((tag, i) => (
                   <span 
                     key={i}
@@ -47,7 +47,7 @@ export const ProjectsSection = () => {
               </div>
 
               {(project.github || project.demo) && (
-                <div className="pt-4 border-t border-border mt-auto flex items-center gap-6">
+                <div className="pt-4 border-t border-border mt-auto flex items-center justify-center gap-6">
                   {project.github && (
                     <a
                       href={project.github}

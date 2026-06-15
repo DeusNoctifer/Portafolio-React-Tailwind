@@ -38,17 +38,17 @@ export const translations = {
       demoLink: "Demo",
       items: [
         {
-          title: "Decora con Arte",
-          description: "Plataforma para gestionar pedidos e inventario con autenticación y roles.",
-          tags: ["Django", "Bootstrap", "Docker", "Postgres", "Google APIs", "Render"],
-          demo: "https://decora-con-arte.onrender.com"
+            title: "Sheets Menu SPA - Template",
+            description: "Plantilla de menú digital con conexión directa a WhatsApp, para restaurantes y tiendas. Permite mostrar el menú de manera atractiva y sencilla, facilitando la toma de pedidos",
+            tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
+            demo: "https://sheets-menu-spa.vercel.app/"
         },
         {
-          title: "API - CRUD App",
-          description: "Consumo de una API con funcionalidades CRUD completas.",
-          tags: ["Express", "React", "Tailwind", "MariaDB"],
-          github: "https://github.com/DeusNoctifer/API-Node-Express-React-Tailwind"
-        },
+            title: "Decora Con Arte",
+            description: "Aplicación móvil para la gestión de pedidos optimizada para dispositivos móviles.",
+            tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
+            demo: "https://decora-con-arte.vercel.app/"
+        }
       ]
     },
     about: {
@@ -199,16 +199,16 @@ export const translations = {
       demoLink: "Demo",
       items: [
         {
-          title: "Order Management",
-          description: "Platform for managing orders and inventory with authentication and roles.",
-          tags: ["Django", "Python 3.13", "Docker", "Postgres"],
-          demo: "https://decora-con-arte.onrender.com"
+            title: "Sheets Menu SPA - Template",
+            description: "Digital menu template with direct WhatsApp connection, for restaurants and stores. It allows you to display the menu in an attractive and simple way, facilitating order taking",
+            tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
+            demo: "https://sheets-menu-spa.vercel.app/"
         },
         {
-          title: "API - CRUD App",
-          description: "API consumption with full CRUD functionalities.",
-          tags: ["Express", "React", "Tailwind", "MariaDB"],
-          github: "https://github.com/DeusNoctifer/API-Node-Express-React-Tailwind"
+            title: "Decora Con Arte",
+            description: "Mobile application for order management optimized for mobile devices.",
+            tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
+            demo: "https://decora-con-arte.vercel.app/"
         }
       ]
     },
@@ -360,16 +360,16 @@ export const translations = {
       demoLink: "演示",
       items: [
         {
-          title: "订单管理系统",
-          description: "具有身份验证和角色管理的订单与库存管理平台。",
-          tags: ["Django", "Python 3.13", "Docker", "Postgres"],
-          demo: "https://decora-con-arte.onrender.com"
+            title: "Sheets Menu SPA - Template",
+            description: "数字菜单模板，直接连接 WhatsApp，适用于餐厅和商店。它允许您以吸引人和简单的方式显示菜单，促进订单的获取",
+            tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
+            demo: "https://sheets-menu-spa.vercel.app/"
         },
         {
-          title: "API - CRUD 应用",
-          description: "具有完整 CRUD 功能的 API 调用应用。",
-          tags: ["Express", "React", "Tailwind", "MariaDB"],
-          github: "https://github.com/DeusNoctifer/API-Node-Express-React-Tailwind"
+            title: "Decora Con Arte - Mobile",
+            description: "适用于移动设备优化的订单管理移动应用程序。",
+            tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
+            demo: "https://decora-con-arte.vercel.app/"
         }
       ]
     },
