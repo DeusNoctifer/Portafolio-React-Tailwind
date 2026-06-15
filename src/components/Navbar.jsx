@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-// Importamos los botones aquí
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
 
@@ -47,7 +46,6 @@ export const Navbar = () => {
             </a>
           ))}
           
-          {/* Contenedor para los Toggles en PC */}
           <div className="flex items-center space-x-3 border-l border-border pl-6">
              <LanguageToggle />
              <ThemeToggle />
@@ -83,7 +81,6 @@ export const Navbar = () => {
               </a>
             ))}
 
-            {/* Contenedor para los Toggles en Celular (separados por una línea) */}
             <div className="w-12 h-px bg-border my-4"></div>
             <div className="flex items-center space-x-4">
                 <LanguageToggle />

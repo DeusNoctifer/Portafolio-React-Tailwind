@@ -15,7 +15,6 @@ export const MainSection = () => {
                         {t?.hero?.hi} {t?.hero?.iam}
                     </span>
                     
-                    {/* Nombre dinámico con tus estilos originales */}
                     <span className="text-primary opacity-0 animate-fade-in-delay-1 ml-2">
                         {t?.hero?.name1}
                     </span>

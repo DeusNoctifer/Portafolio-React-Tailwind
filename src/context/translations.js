@@ -9,6 +9,7 @@ export const translations = {
         { name: "Sobre Mí", href: "#about" },
         { name: "Experiencia", href: "#experience" },
         { name: "Habilidades", href: "#skills" },
+        { name: "Proyectos", href: "#projects" },
         { name: "Contacto", href: "#contacto" },
       ],
       aria: {
@@ -161,6 +162,7 @@ export const translations = {
         { name: "About", href: "#about" },
         { name: "Experience", href: "#experience" },
         { name: "Skills", href: "#skills" },
+        { name: "Projects", href: "#projects" },
         { name: "Contact", href: "#contacto" },
       ],
       aria: {
@@ -313,6 +315,7 @@ export const translations = {
         { name: "关于我", href: "#about" },
         { name: "经验", href: "#experience" },
         { name: "技能", href: "#skills" },
+        { name: "项目", href: "#projects" },
         { name: "联系我", href: "#contacto" },
       ],
       aria: {
