@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
 
 const skills = [
     
@@ -27,12 +28,12 @@ const skills = [
   { name: "MuleSoft AnyPoint", level: 80, category: "otras" },
 ];
 
-const categories = ["todas", "frontend", "backend", "otras"];
+const categoryKeys = ["all", "frontend", "backend", "other"];
 
-const getSkillTier = (level) => {
+const getSkillTier = (level, t) => {
   if (level <= 70) {
     return {
-      label: "Intermedio",
+      label: t?.skills?.levels?.intermediate || "Intermedio",
       colorText: "text-slate-500 dark:text-slate-400",
       colorBg: "bg-slate-500/10",
       colorBorder: "border-slate-500/20", 
@@ -40,14 +41,14 @@ const getSkillTier = (level) => {
   }
   if (level <= 85) {
     return {
-      label: "Sólido",
+      label: t?.skills?.levels?.solid || "Sólido",
       colorText: "text-teal-600 dark:text-teal-500",
       colorBg: "bg-teal-500/10",
       colorBorder: "border-teal-500/50",
     };
   }
   return {
-    label: "Avanzado",
+    label: t?.skills?.levels?.advanced || "Avanzado",
     colorText: "text-blue-600 dark:text-blue-500", 
     colorBg: "bg-blue-500/10",
     colorBorder: "border-blue-500",
@@ -55,39 +56,47 @@ const getSkillTier = (level) => {
 };
 
 export const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("todas");
+  const [activeCategory, setActiveCategory] = useState("all");
+  const { t } = useLanguage();
+
+  const categoryMap = {
+    all: "todas",
+    frontend: "frontend",
+    backend: "backend",
+    other: "otras",
+  };
 
   const filteredSkills = skills
-    .filter((skill) => activeCategory === "todas" || skill.category === activeCategory)
+    .filter((skill) => activeCategory === "all" || skill.category === categoryMap[activeCategory])
     .sort((a, b) => b.level - a.level);
 
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          Mis <span className="text-primary"> Habilidades</span>
+          {t?.skills?.title}<span className="text-primary">{t?.skills?.titleHighlight}</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category, key) => (
+          {categoryKeys.map((key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(key)}
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
-                activeCategory === category
+                activeCategory === key
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary/70 text-foreground hover:bg-secondary"
               )}
             >
-              {category}
+              {t?.skills?.categories?.[key]}
             </button>
           ))}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredSkills.map((skill, key) => {
-            const tier = getSkillTier(skill.level);
+            const tier = getSkillTier(skill.level, t);
 
             return (
               <div

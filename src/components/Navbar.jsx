@@ -37,7 +37,7 @@ export const Navbar = () => {
 
         {/* --- DESKTOP NAV --- */}
         <div className="hidden md:flex items-center space-x-8">
-          {t?.navbar?.map((item, key) => (
+          {t?.navbar?.items?.map((item, key) => (
             <a
               key={key}
               href={item.href}
@@ -54,11 +54,11 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* --- MOBILE NAV TOGGLE BUTTON --- */}
+          {/* --- MOBILE NAV TOGGLE BUTTON --- */}
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
           className="md:hidden p-2 text-foreground z-50 focus:outline-none"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          aria-label={isMenuOpen ? t?.navbar?.aria?.closeMenu : t?.navbar?.aria?.openMenu}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -72,7 +72,7 @@ export const Navbar = () => {
           )}
         >
           <div className="flex flex-col space-y-6 text-xl text-center items-center">
-            {t?.navbar?.map((item, key) => (
+            {t?.navbar?.items?.map((item, key) => (
               <a
                 key={key}
                 href={item.href}

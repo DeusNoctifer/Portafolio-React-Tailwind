@@ -1,6 +1,9 @@
 import { ArrowUp } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export const Footer = () => {
+    const { t } = useLanguage();
+
     return (
         <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
             <div className="text-sm text-muted-foreground">
@@ -8,7 +11,7 @@ export const Footer = () => {
                     © {new Date().getFullYear()} Juan Manuel Valencia Velez.
                     <span className="block sm:inline">
                         {" "}
-                        Bajo licencia{" "}
+                        {t?.footer?.license}{" "}
                         <a
                             href="https://www.gnu.org/licenses/gpl-3.0.html"
                             target="_blank"
@@ -20,14 +23,14 @@ export const Footer = () => {
                     </span>
                 </p>
                 <p className="mt-1">
-                    🚀 Proyecto 100% Open Source.{" "}
+                    {t?.footer?.openSource}{" "}
                     <a
                         href="https://github.com/DeusNoctifer/Portafolio-React-Tailwind"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-primary hover:underline"
                     >
-                        ¡Contribuciones bienvenidas!
+                        {t?.footer?.contributions}
                     </a>
                 </p>
             </div>
@@ -35,7 +38,7 @@ export const Footer = () => {
             <a
                 href="#inicio"
                 className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-                aria-label="Volver al inicio"
+                aria-label={t?.footer?.backToTop}
             >
                 <ArrowUp size={20} />
             </a>

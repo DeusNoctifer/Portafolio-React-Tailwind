@@ -1,3 +1,6 @@
+import { useLanguage } from "@/context/LanguageContext";
+
 export const NotFound = () => {
-    return <div>Not Found</div>
+    const { t } = useLanguage();
+    return <div>{t?.notFound?.title}</div>
 }

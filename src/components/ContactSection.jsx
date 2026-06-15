@@ -10,10 +10,12 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
+import { useLanguage } from "@/context/LanguageContext";
 
 export const ContactSection = () => {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const { t } = useLanguage();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -30,15 +32,15 @@ export const ContactSection = () => {
             console.log("Email enviado:", result);
             
             toast({
-                title: "Mensaje enviado!",
-                description: "Gracias por tu mensaje, te responderé pronto.",
+                title: t?.contact?.toast?.successTitle,
+                description: t?.contact?.toast?.successDescription,
             });
             e.target.reset();
         } catch (error) {
             console.error("Error detallado:", error);
             toast({
-                title: "Error",
-                description: "Hubo un problema al enviar tu mensaje. Por favor inténtalo de nuevo.",
+                title: t?.contact?.toast?.errorTitle,
+                description: t?.contact?.toast?.errorDescription,
                 variant: "destructive",
             });
         } finally {
@@ -49,19 +51,18 @@ export const ContactSection = () => {
         <section id="contacto" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                    Ponte en <span className="text-primary"> Contacto</span>
+                    {t?.contact?.title}<span className="text-primary">{t?.contact?.titleHighlight}</span>
                 </h2>
 
                 <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    ¿Te llamaron la atención mis habilidades y proyectos? Siéntete libre de contactarme.
-                    Siempre estoy dispuesto a desarrollar e idear nuevos proyectos.
+                    {t?.contact?.subtitle}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="space-y-8">
                         <h3 className="text-2xl font-semibold mb-6">
                             {" "}
-                            Información de Contacto
+                            {t?.contact?.infoTitle}
                         </h3>
 
                         <div className="space-y-6">
@@ -72,7 +73,7 @@ export const ContactSection = () => {
                                     <Mail className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <h4 className="font-medium text-left">Email</h4>
+                                    <h4 className="font-medium text-left">{t?.contact?.emailLabel}</h4>
                                     <a
                                         href="mailto:noctiferium@gmail.com"
                                         className="text-muted-foreground hover:text-primary transition-colors block text-left"
@@ -88,7 +89,7 @@ export const ContactSection = () => {
                                     <Phone className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <h4 className="font-medium text-left">Celular</h4>
+                                    <h4 className="font-medium text-left">{t?.contact?.phoneLabel}</h4>
                                     <a
                                         href="tel:+573195543774"
                                         className="text-muted-foreground hover:text-primary transition-colors block text-left"
@@ -104,16 +105,16 @@ export const ContactSection = () => {
                                     <MapPin className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                    <h4 className="font-medium text-left">Localidad</h4>
+                                    <h4 className="font-medium text-left">{t?.contact?.locationLabel}</h4>
                                     <p className="text-muted-foreground hover:text-primary transition-colors text-left">
-                                        Medellín, Colombia
+                                        {t?.contact?.locationValue}
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="pt-8">
-                            <h4 className="font-medium mb-4"> Mis Redes</h4>
+                            <h4 className="font-medium mb-4">{t?.contact?.socialTitle}</h4>
                             <div className="flex space-x-4 justify-center">
                                 <a href="https://www.linkedin.com/in/juan-manuel-valencia-velez-4b4493320/" target="_blank">
                                     <Linkedin />
@@ -126,7 +127,7 @@ export const ContactSection = () => {
                     </div>
 
                     <div className="bg-card p-8 rounded-lg shadow-xs">
-                        <h3 className="text-2xl font-semibold mb-6"> ¡Envíame un mensaje!</h3>
+                        <h3 className="text-2xl font-semibold mb-6">{t?.contact?.formTitle}</h3>
 
                         <form className="space-y-6" onSubmit={handleSubmit}>
                             <div>
@@ -135,7 +136,7 @@ export const ContactSection = () => {
                                     className="block text-sm font-medium mb-2"
                                 >
                                     {" "}
-                                    Tu Nombre
+                                    {t?.contact?.form?.nameLabel}
                                 </label>
                                 <input
                                     type="text"
@@ -143,7 +144,7 @@ export const ContactSection = () => {
                                     name="name"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                                    placeholder="Ingresa tu nombre"
+                                    placeholder={t?.contact?.form?.namePlaceholder}
                                 />
                             </div>
 
@@ -153,7 +154,7 @@ export const ContactSection = () => {
                                     className="block text-sm font-medium mb-2"
                                 >
                                     {" "}
-                                    Tu Correo
+                                    {t?.contact?.form?.emailLabel}
                                 </label>
                                 <input
                                     type="email"
@@ -161,7 +162,7 @@ export const ContactSection = () => {
                                     name="email"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
-                                    placeholder="Ingresa tu correo"
+                                    placeholder={t?.contact?.form?.emailPlaceholder}
                                 />
                             </div>
 
@@ -171,14 +172,14 @@ export const ContactSection = () => {
                                     className="block text-sm font-medium mb-2"
                                 >
                                     {" "}
-                                    Tu Mensaje
+                                    {t?.contact?.form?.messageLabel}
                                 </label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     required
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
-                                    placeholder="Hola, me interesa tu trabajo..."
+                                    placeholder={t?.contact?.form?.messagePlaceholder}
                                 />
                             </div>
 
@@ -189,7 +190,7 @@ export const ContactSection = () => {
                                     "cosmic-button w-full flex items-center justify-center gap-2"
                                 )}
                             >
-                                {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                                {isSubmitting ? t?.contact?.form?.submitting : t?.contact?.form?.submit}
                                 <Send size={16} />
                             </button>
                         </form>

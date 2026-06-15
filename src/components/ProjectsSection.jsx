@@ -62,7 +62,7 @@ export const ProjectsSection = () => {
                       className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors w-fit"
                     >
                       <Github size={18} />
-                      Code
+                      {t?.projects?.codeLink}
                     </a>
                   )}
 
@@ -74,7 +74,7 @@ export const ProjectsSection = () => {
                       className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors transition-all"
                     >
                       <ExternalLink size={18} />
-                      <span>Demo</span>
+                      <span>{t?.projects?.demoLink}</span>
                     </a>
                   )}
                 </div>
