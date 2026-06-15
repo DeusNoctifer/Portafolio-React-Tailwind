@@ -5,8 +5,8 @@ export const Footer = () => {
     const { t } = useLanguage();
 
     return (
-        <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-between items-center">
-            <div className="text-sm text-muted-foreground">
+        <footer className="py-12 px-4 bg-card relative border-t border-border mt-12 pt-8 flex flex-wrap justify-center items-center gap-4">
+            <div className="text-sm text-muted-foreground text-center">
                 <p>
                     © {new Date().getFullYear()} Juan Manuel Valencia Velez.
                     <span className="block sm:inline">
