@@ -150,6 +150,8 @@ export const translations = {
     },
     notFound: {
       title: "Página no encontrada",
+      description: "La ruta a la que intentaste acceder no existe o fue movida.",
+      button: "Volver al inicio",
     },
   },
 
@@ -303,6 +305,8 @@ export const translations = {
     },
     notFound: {
       title: "Page not found",
+      description: "The page you tried to access does not exist or has been moved.",
+      button: "Back to home",
     },
   },
 
@@ -456,6 +460,8 @@ export const translations = {
     },
     notFound: {
       title: "页面未找到",
+      description: "您尝试访问的页面不存在或已被移动。",
+      button: "返回首页",
     },
   }
 };

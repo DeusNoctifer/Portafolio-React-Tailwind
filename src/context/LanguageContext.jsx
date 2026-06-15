@@ -5,9 +5,12 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
 
-    const [language, setLanguage] = useState("es");
+    const [language, setLanguage] = useState(() => {
+        return localStorage.getItem("lang") || "es";
+    });
 
     useEffect(() => {
+        localStorage.setItem("lang", language);
         if (language === "zh") {
             document.documentElement.classList.add("lang-zh");
         } else {
