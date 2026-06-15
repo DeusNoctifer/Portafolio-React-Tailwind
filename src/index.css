@@ -87,6 +87,14 @@
     --border: 217 33% 20%;
   }
 
+  :root.lang-zh {
+    --primary: 0 84% 55%;
+  }
+
+  .dark.lang-zh {
+    --primary: 0 74% 60%;
+  }
+
   * {
     @apply border-border;
   }
