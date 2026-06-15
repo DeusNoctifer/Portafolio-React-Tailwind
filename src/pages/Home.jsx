@@ -6,6 +6,7 @@ import { MainSection } from "@/components/MainSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { AboutSection } from "@/components/AboutMe";
 import { SkillsSection } from "@/components/SkillsSection";
+import { CertificatesSection } from "@/components/CertificatesSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,7 @@ export const Home = () => {
                     <MainSection />
                     <AboutSection />
                     <ExperienceSection />
+                    <CertificatesSection />
                     <SkillsSection />
                     <ProjectsSection />
                     <ContactSection />

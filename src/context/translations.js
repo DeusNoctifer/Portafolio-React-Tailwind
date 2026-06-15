@@ -8,8 +8,8 @@ export const translations = {
         { name: "Inicio", href: "#inicio" },
         { name: "Sobre Mí", href: "#about" },
         { name: "Experiencia", href: "#experience" },
-        { name: "Habilidades", href: "#skills" },
         { name: "Proyectos", href: "#projects" },
+        { name: "Certificados", href: "#certificates" },
         { name: "Contacto", href: "#contacto" },
       ],
       aria: {
@@ -99,6 +99,12 @@ export const translations = {
         },
       ],
     },
+    certificates: {
+      title: "Certificados",
+      subtitle: "Algunas de mis certificaciones que respaldan mi formación y experiencia profesional.",
+      viewCert: "Ver certificado",
+      viewSkills: "Ver habilidades",
+    },
     skills: {
       title: "Mis ",
       titleHighlight: "Habilidades",
@@ -163,8 +169,8 @@ export const translations = {
         { name: "Home", href: "#inicio" },
         { name: "About", href: "#about" },
         { name: "Experience", href: "#experience" },
-        { name: "Skills", href: "#skills" },
         { name: "Projects", href: "#projects" },
+        { name: "Certificates", href: "#certificates" },
         { name: "Contact", href: "#contacto" },
       ],
       aria: {
@@ -254,6 +260,12 @@ export const translations = {
         },
       ],
     },
+    certificates: {
+      title: "Certificates",
+      subtitle: "Some of my certifications that support my training and professional experience.",
+      viewCert: "View certificate",
+      viewSkills: "View skills",
+    },
     skills: {
       title: "My ",
       titleHighlight: "Skills",
@@ -318,8 +330,8 @@ export const translations = {
         { name: "首页", href: "#inicio" },
         { name: "关于我", href: "#about" },
         { name: "经验", href: "#experience" },
-        { name: "技能", href: "#skills" },
         { name: "项目", href: "#projects" },
+        { name: "毕业证书", href: "#certificates" },
         { name: "联系我", href: "#contacto" },
       ],
       aria: {
@@ -408,6 +420,12 @@ export const translations = {
           ],
         },
       ],
+    },
+    certificates: {
+      title: "证书",
+      subtitle: "我的一些认证，证明我的培训和专业经验。",
+      viewCert: "查看证书",
+      viewSkills: "查看技能",
     },
     skills: {
       title: "我的",
