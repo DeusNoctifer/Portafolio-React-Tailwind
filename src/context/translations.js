@@ -48,6 +48,12 @@ export const translations = {
             description: "Aplicación móvil para la gestión de pedidos optimizada para dispositivos móviles.",
             tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
             demo: "https://decora-con-arte.vercel.app/"
+        },
+        {
+            title: "SpellChecker Browser Extension",
+            description: "Extensión de navegador que detecta y corrige automáticamente errores gramaticales en inglés mientras escribes, ofreciendo sugerencias rápidas directamente en los campos de texto.",
+            tags: ["JavaScript", "API"],
+            code: "https://github.com/DeusNoctifer/spellchecker-browser-extension"
         }
       ]
     },
@@ -209,6 +215,12 @@ export const translations = {
             description: "Mobile application for order management optimized for mobile devices.",
             tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
             demo: "https://decora-con-arte.vercel.app/"
+        },
+        {
+            title: "SpellChecker Browser Extension",
+            description: "Browser extension that automatically detects and corrects English grammar mistakes while typing, providing fast suggestions directly inside text inputs.",
+            tags: ["JavaScript", "API"],
+            code: "https://github.com/DeusNoctifer/spellchecker-browser-extension"
         }
       ]
     },
@@ -370,6 +382,12 @@ export const translations = {
             description: "适用于移动设备优化的订单管理移动应用程序。",
             tags: ["React", "TypeScript", "Tailwind", "Google Sheets"],
             demo: "https://decora-con-arte.vercel.app/"
+        },
+        {
+            title: "SpellChecker 浏览器扩展",
+            description: "一款浏览器扩展，可在输入时自动检测并纠正英语语法错误，直接在文本输入框中提供快速建议。",
+            tags: ["JavaScript", "API"],
+            code: "https://github.com/DeusNoctifer/spellchecker-browser-extension"
         }
       ]
     },
