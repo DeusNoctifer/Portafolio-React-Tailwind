@@ -46,11 +46,11 @@ export const ProjectsSection = () => {
                 ))}
               </div>
 
-              {(project.github || project.demo) && (
+              {(project.github || project.code || project.demo) && (
                 <div className="pt-4 border-t border-border mt-auto flex items-center justify-center gap-6">
-                  {project.github && (
+                  {(project.github || project.code) && (
                     <a
-                      href={project.github}
+                      href={project.github || project.code}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors w-fit"
