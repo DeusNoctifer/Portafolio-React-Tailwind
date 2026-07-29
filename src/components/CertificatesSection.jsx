@@ -2,6 +2,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Award, ExternalLink, ArrowRight } from "lucide-react";
 import technicalDegree from "@/assets/certificates/technical-degree.pdf";
 import englishB1 from "@/assets/certificates/english-b1.pdf";
+import postgresqlCourse from "@/assets/certificates/postgres.jpg";
 
 const certificates = [
   {
@@ -17,6 +18,14 @@ const certificates = [
     date: "2022",
     tags: ["Inglés", "Comunicación"],
     file: englishB1,
+  },
+
+  {
+    title: "PostgreSQL Course",
+    issuer: "Udemy",
+    date: "2026",
+    tags: ["PostgreSQL", "Database", "SQL"],
+    file: postgresqlCourse,
   }
 ];
 
